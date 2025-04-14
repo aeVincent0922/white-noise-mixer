@@ -1,5 +1,6 @@
 import './index.css'
 import Home from './pages/Home.tsx';
+import Footer from './components/Footer.tsx';
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
       <div>
         <Home />
       </div>
+      <Footer />
     </>
   )
 }
