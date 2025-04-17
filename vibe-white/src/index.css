@@ -1,9 +1,14 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
 
 /* 字體 */
 .black-ops {
   font-family: "Black Ops One";
+  font-weight: 400;
+  font-style: normal;
+}
+.sour-gummy {
+  font-family: "Sour Gummy";
   font-weight: 400;
   font-style: normal;
 }
@@ -31,7 +36,7 @@
 }
 
 /* 動畫 */
-/* 首頁標題動畫 */
+/* 首頁標題打字動畫 */
 @keyframes typewriter {
   0% {
     width: 0;
@@ -47,6 +52,7 @@
   }
 }
 
+/* 首頁標題打字游標 */
 @keyframes blinkTextCursor {
   from {
     border-right-color: var(--color-olive-300);
@@ -56,7 +62,8 @@
   }
 }
 
-.title {
+/* 首頁標題class */
+.title-typing {
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
@@ -64,4 +71,59 @@
   animation:
     typewriter 1.5s steps(10) 1s 1 normal both,
     blinkTextCursor 0.8s steps(10) infinite normal;
+}
+
+/* char_1進場進場動畫 */
+@keyframes pilotEnter {
+  0% {
+    transform: translate(-100%, 100%) scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: translate(20px, 0) scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* char_1漂浮動畫 */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.char_1::after {
+  content: "Let's make some good vibes";
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.char_1-enter {
+  animation:
+    pilotEnter 1.8s ease-out forwards,
+    float 3s ease-in-out 2s infinite;
+}
+
+.bubble_1::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-top-color: white;
+  border-left-color: white;
 }
