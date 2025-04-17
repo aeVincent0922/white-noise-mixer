@@ -1,0 +1,37 @@
+<svg
+  width="100"
+  height="38.89"
+  viewBox="0 0 180 70"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g
+    id="vibe"
+    transform="translate(0, 0)"
+    stroke-linecap="round"
+    fill-rule="evenodd"
+    font-size="9pt"
+    stroke="#466138"
+    stroke-width="0.25mm"
+    fill="#466138"
+  >
+    <path
+      d="M 44.434 64.795 L 23.438 64.795 L 0 0 L 22.021 0 L 44.434 64.795 Z M 69.482 0 L 47.07 62.842 L 37.354 34.326 L 47.803 0 L 69.482 0 Z"
+      vector-effect="non-scaling-stroke"
+    />
+  </g>
+  <g
+    id="white"
+    transform="translate(50, 0)"
+    stroke-linecap="round"
+    fill-rule="evenodd"
+    font-size="9pt"
+    stroke="#466138"
+    stroke-width="0.25mm"
+    fill="#ffffff"
+  >
+    <path
+      d="M 38.965 64.795 L 19.385 64.795 L 0 0 L 21.484 0 L 31.006 35.596 L 37.5 8.398 L 45.947 39.16 L 38.965 64.795 Z M 76.807 64.795 L 56.201 64.795 L 38.428 0 L 60.205 0 L 76.807 64.795 Z M 96.68 0 L 79.102 61.426 L 70.313 26.904 L 77.002 0 L 96.68 0 Z"
+      vector-effect="non-scaling-stroke"
+    />
+  </g>
+</svg>
