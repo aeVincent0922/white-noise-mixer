@@ -1,0 +1,68 @@
+/* char_1進場進場動畫 */
+@keyframes pilotEnter {
+  0% {
+    transform: translate(-100%, 100%) scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: translate(20px, 0) scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* char_1漂浮動畫 */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* char_1動畫 */
+.char_1-enter {
+  animation:
+    pilotEnter 1.8s ease-out forwards,
+    float 3s ease-in-out 2s infinite;
+}
+
+/* 對話框動畫 */
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+/* hover 翻轉效果 */
+.char_1-enter:hover + .flip-card > .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.flip-back {
+  z-index: 999;
+  transform: rotateY(180deg);
+}
