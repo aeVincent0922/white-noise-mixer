@@ -14,7 +14,6 @@
   font-style: normal;
 }
 
-
 /* 色票 */
 @theme {
   --color-olive-100: oklch(0.75 0.0653 117.77);
@@ -35,4 +34,20 @@
     0 0 80px rgba(0, 0, 0, 0.25),
     0 0 36px rgba(0, 0, 0, 0.2),
     0 0 48px rgba(0, 0, 0, 0.15);
+}
+
+/* 向下浮現過度動畫 */
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-down {
+  animation: fadeDown 3s ease forwards;
 }
