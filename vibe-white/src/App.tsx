@@ -10,12 +10,6 @@ function App() {
   // LoadingAnimation
   const [isLoading, setIsLoading] = useState(true);
 
-  // 這裡可以改成資源真正載入後觸發
-  // useEffect(() => {
-  //   const timer = setTimeout(() => setIsLoading(false), 9000);
-  //   return () => clearTimeout(timer);
-  // }, []);
-
   useEffect(() => {
     if (!isLoading) {
       console.log("Loading Completed");

@@ -20,10 +20,6 @@ const LoadingAnimation: FC<LoadingAnimationProps> = ({ onComplete }) => {
         ease: 'inSine',
         delay: stagger(50),
       }, '+=1000')
-      .add('.loader-container', {
-        'background-color': 'bg-bg-100', 
-        ease: 'inOut(3)'
-      }, '+=500');
   }, [onComplete]);
 
   return (
