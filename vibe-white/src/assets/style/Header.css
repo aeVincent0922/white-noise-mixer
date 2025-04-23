@@ -10,7 +10,7 @@
     width: 4em;
   }
   100% {
-    width: 12.8em;
+    width: 13em;
   }
 }
 
@@ -31,6 +31,6 @@
   overflow: hidden;
   border-right: 2px solid var(--color-olive-300);
   animation:
-    typewriter 1.5s steps(10) 1s 1 normal both,
+    typewriter 2s steps(10) 1s 1 normal both,
     blinkTextCursor 0.8s steps(10) infinite normal;
 }

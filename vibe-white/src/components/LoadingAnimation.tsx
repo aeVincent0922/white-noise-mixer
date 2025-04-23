@@ -14,11 +14,11 @@ const LoadingAnimation: FC<LoadingAnimationProps> = ({ onComplete }) => {
       opacity: [0, 1],
       y: '2rem',
       delay: stagger(200),
-    }, 1000)
+    }, 500)
     // 淡出非Logo字母
     .add('.minor-letter', {
       opacity: [1, 0],
-      duration: 1500
+      duration: 800
     }, '+=500')
     // 組合Logo1
     .add('.main-letter-1', {
@@ -35,7 +35,7 @@ const LoadingAnimation: FC<LoadingAnimationProps> = ({ onComplete }) => {
       opacity: [1, 0],
       scale: 20,
       duration: 1000
-    }, '+=1000')
+    }, '+=800')
   }, [onComplete]);
 
   return (

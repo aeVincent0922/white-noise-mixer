@@ -1,14 +1,22 @@
-import { FC } from "react";
-import '../assets/style/Char_1.css';
+import { FC, useEffect, useState } from "react";
+import '../assets/style/Char.css';
 
-const Char_1: FC = () => {
+const Char: FC = () => {
+  const [charIndex, setCharIndex] = useState(1);
+
+  useEffect(() =>{
+    const randomIndex = Math.round(Math.random() * 4) + 1;
+    setCharIndex(randomIndex);
+  }, []);
+
+  const charImage = `/images/char_${charIndex}.png`
   return (
     <div className=" h-screen z-50">
       <div className="relative h-7">
         <img
-          src="/images/char_1.png"
-          alt="pilot"
-          className="char_1-enter fixed -bottom-10 -left-5"
+          src={charImage}
+          alt="char"
+          className="char-enter fixed -bottom-10 -left-5"
         />
         <div className="flip-card fixed bottom-70 left-50 h-[100px] w-[300px]">
           <div className="flip-inner flipped">
@@ -27,4 +35,4 @@ const Char_1: FC = () => {
   );
 };
 
-export default Char_1;
+export default Char;

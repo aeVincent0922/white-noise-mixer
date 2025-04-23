@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Home from "./pages/Home.tsx";
 import Footer from "./components/Footer.tsx";
 import Header from "./components/Header.tsx";
-import Char_1 from "./components/Char_1.tsx";
+import Char from "./components/Char.tsx";
 import LoadingAnimation from "./components/LoadingAnimation.tsx";
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
         <>
           <Header />
           <Home />
-          <Char_1 />
+          <Char />
           <Footer />
         </>
       )}
