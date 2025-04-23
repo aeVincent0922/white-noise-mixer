@@ -4,7 +4,7 @@ import '../assets/style/Char.css';
 const Char: FC = () => {
   const [charIndex, setCharIndex] = useState(1);
 
-  useEffect(() =>{
+  useEffect(() => {
     const randomIndex = Math.round(Math.random() * 4) + 1;
     setCharIndex(randomIndex);
   }, []);

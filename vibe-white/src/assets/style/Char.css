@@ -4,12 +4,8 @@
     transform: translate(0, 100%) scale(0.5);
     opacity: 0;
   }
-  60% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
   100% {
-    transform: translate(0, 0) scale(1);
+    transform: translate(0, -5px) scale(1);
   }
 }
 
