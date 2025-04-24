@@ -1,11 +1,5 @@
 import { create } from 'zustand';
 
-// export type TracksInfo = {
-//     title: string,
-//     describe: string,
-//     img: string
-// }
-
 // 音軌
 export const userTracksStore = create(() => ({
     tracks: [
@@ -35,12 +29,12 @@ export const userTracksStore = create(() => ({
             img: 'images/scene_5.png'
         },
         {
-            title: 'Scenic Byway',
+            title: 'Scenic Way',
             describe: '收音機、引擎、風切',
             img: 'images/scene_6.png'
         },
         {
-            title: 'Wilderness',
+            title: 'Wild',
             describe: '腳步、碎石、灌木摩擦、昆蟲鳴叫、砂礫、微風',
             img: 'images/scene_7.png'
         },
@@ -48,6 +42,11 @@ export const userTracksStore = create(() => ({
             title: 'Dune',
             describe: '風沙、沙漠、枯木',
             img: 'images/scene_8.png'
+        },
+        {
+            title: 'Beach',
+            describe: '海浪、海鷗、棕梠樹、夏日',
+            img: 'images/scene_9.png'
         }
     ]
 }))

@@ -2,6 +2,15 @@
 
 /* 全域樣式 */
 
+html {
+  scroll-behavior: smooth;
+}
+/* scrollbar */
+html::-webkit-scrollbar {
+  width: 0;
+}
+
+
 /* 字體 */
 .black-ops {
   font-family: "Black Ops One";
@@ -50,3 +59,4 @@
 .fade-down {
   animation: fadeDown 3s ease forwards;
 }
+
