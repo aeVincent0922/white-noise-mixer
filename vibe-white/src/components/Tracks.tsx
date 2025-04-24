@@ -6,19 +6,22 @@ const Tracks: FC = () => {
     const tracks = userTracksStore((state) => state.tracks);
     useEffect(() => {
         const tl = createTimeline({ defaults: { duration: 750 } });
-        tl.add('.track', {
+        tl.add('.track-container-title', {
             opacity: [0, 1],
-            y: '5rem',
-            delay: stagger(200)
         })
+        .add('.track', {
+            opacity: 1,
+            y: '1rem',
+            delay: stagger(100),
+        }, '+=200')
     }, [])
     return (
         <div>
-            <h1 className=" relative max-w-[48%] mx-auto text-start text-3xl text-olive-200 py-3 inter font-bold fade-down">Scene</h1>
+            <h1 className="track-container-title opacity-0 relative max-w-[48%] mx-auto text-start text-3xl text-olive-200 py-3 inter font-bold">Scene</h1>
             <div className="track-container max-w-[60%] flex gap-10 justify-center content-start flex-wrap mx-auto">
                 {tracks.map((track) => (
                     <>
-                        <div className="inter relative -top-[5rem] track opacity-0 w-72 bg-olive-100 shadow-2xl/50 rounded-2xl overflow-hidden hover:scale-[1.05] hover:bg-olive-200 transition-transform ease-in-out duration-400">
+                        <div className="inter relative -top-[1rem] track opacity-0 w-72 bg-olive-100 shadow-2xl/50 rounded-2xl overflow-hidden hover:scale-[1.05] hover:bg-olive-200 transition-transform ease-in-out duration-400">
                             <div className="pt-4 pb-2 px-4">
                                 <div className="flex items-center gap-5">
                                     <img src={track.img} alt="scene" className="w-[80px] h-[80px]" />
